@@ -9,6 +9,46 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Zeynep</title>
+
+    <style media="screen">
+    #my-side-nav a {
+    position: absolute;
+    left: -100px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 135px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    }
+    #my-side-nav a:hover {
+    left: 0;
+    }
+    #home {
+    top: 20px;
+    background-color: #79A7A8;
+    }
+    #about {
+    top: 80px;
+    background-color: #F59914;
+    }
+    #services {
+    top: 200px;
+    background-color: #4CAF50;
+    }
+    #blog {
+    top: 140px;
+    background-color: #2196F3;
+    }
+    #contact {
+    top: 260px;
+    background-color: #555;
+    }
+    .fas, .far {
+    margin-right: 5px;
+    }
+    </style>
   </head>
   <body>
    <!--  <?php //include("menu.php") ?>-->
@@ -27,6 +67,15 @@
       </div>ı
     </div>
   </nav>
+
+  <div id="my-side-nav" style="position: absolute;">
+        <a href="#" id="home"><i class="fas fa-home"></i>Anasayfa</a>
+        <a href="hakkinda.html" target="_blank" id="about"><i class="fas fa-user"></i>Hakkımda</a>
+        <a href="#" id="services"><i class="fas fa-th-large"></i>Hizmetler</a>
+        <a href="https://zeynepindefteri.wordpress.com/" target="_blank" id="blog"><i class="fas fa-pencil-alt"></i>Blog</a>
+        <a href="#" id="contact"><i class="far fa-envelope"></i>İletişim</a>
+    </div>
+
    <main class="container mt-3">
      <div class="row">
        <section class="col-sm-8">
@@ -74,6 +123,7 @@
        </aside>
       </div>
     </main>
+    <script src="https://kit.fontawesome.com/sizin-id-niz-gelecek.js" crossorigin="anonymous"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
