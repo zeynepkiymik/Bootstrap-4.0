@@ -10,8 +10,8 @@
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Kodluyoruz</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" href="index.html"><img src="logo.png" width="100" alt="Zeynep Kiymik"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -21,40 +21,81 @@
                 <a class="nav-item nav-link" href="#">Eğitimler</a>
                 <a class="nav-item nav-link" href="#">İletişim</a>
                 <a class="nav-item nav-link" href="hesaplama.html">Hesaplama</a>
+                <a class="nav-item nav-link" href="makina.html">Hesap Makinası</a>
+
               </div>ı
             </div>
           </nav>
 
           <div class="container">
               <div class="row">
-                <form>
+                <form name="hesaplama">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Sayı 1</label>
-                        <input type="sayi1" class="form-control" id="exampleFormControlInput1" autocomplete="off" >
+                        <input type="number" class="form-control" id="sayi1" autocomplete="off" >
                       </div>
                       <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Sayı 2</label>
-                        <input type="sayi2" class="form-control" id="exampleFormControlInput1" >
+                        <input type="number" class="form-control" id="sayi2" autocomplete="off" >
                       </div>
         
-                      <select class="form-control" aria-label="Default select example">
+                      <select id="islem" class="form-control" aria-label="Default select example">
                         <option selected>İşlemler</option>
                         <option value="1">Toplama</option>
                         <option value="2">Çıkarma</option>
                         <option value="3">Çarpma</option>
-                        <option value="3">Bölme</option>
+                        <option value="4">Bölme</option>
         
                       </select>
                       
                       <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Sonuç</label>
-                        <label class="form-control"> 0 </label>
+                         <hr>
+                         <input type="text" id="sonuc" class="form-control" autocomplete="off">
                       </div>
         
         
-          <button type="submit" class="btn btn-primary">Hesapla</button>
+          <button type="button" id="hesapla" name="btn-hesapla" class="btn btn-primary">Hesapla</button>
         </form>
               </div>
           </div>
     </body>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.slim.js"
+  integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+  crossorigin="anonymous"></script>
+<script>
+    $(document).ready( function(){
+
+
+      $("#hesapla").click(function(){
+     
+
+        var sayi1 =  parseInt($("#sayi1").val()); 
+        var sayi2 =  parseInt($("#sayi2").val());
+        var islem =  $("#islem").val();
+        
+        if ( islem == 1 )
+        {
+          var sonuc = sayi1 + sayi2;
+        }
+        if ( islem == 2 )
+        {
+          var sonuc = sayi1 - sayi2;
+        } 
+        if ( islem == 3 )
+        {
+          var sonuc = sayi1 * sayi2;
+        }
+        if ( islem == 4 )
+        {
+          var sonuc = sayi1 / sayi2;
+        }
+        
+       // alert("sonuç = " + carpim)
+        $("#sonuc").val("sonuç = " + sonuc);
+      });
+
+    });
+</script>
+
 </html>
