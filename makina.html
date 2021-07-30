@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <style>
+
 #output
 {
     width: 330px;
@@ -27,6 +28,7 @@
     margin: 12px;
     border: 4px solid;
     }
+    
     #r1-3
     {
     width: 100px;
@@ -162,6 +164,7 @@
     font-size: 58px;
     margin: 12px;
     border: 4px solid;
+    transition: all 4s;
     }
     #r5-2
     {
@@ -171,6 +174,7 @@
     font-size: 58px;
     margin: 4px;
     border: 4px solid;
+    transition: all 4s;
     }
     #r5-3
     {
@@ -180,8 +184,24 @@
     font-size: 58px;
     margin: 4px;
     border: 4px solid;
+    transition: all 4s;
     }
+    button:hover {
+ cursor: pointer;
+ background-color: #ff0000 !important;
+ zoom: 1.1;
+}
+
+button:focus {
+ outline: none;
+}
+button:active {
+ background-color: #98a6b3;
+}
 </style>
+
+
+
 </head>
 <body> 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -206,35 +226,40 @@
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
+              <div class="display">
 
                 <p id="output">0</p>
 <div class="first-row">
-   <button id="r1-1">C</button>
+   <button id="r1-1" onclick="ekraniTemizle()">C</button>
    <button id="r1-3">%</button>
    <button id="r1-4">/</button>
 </div>
 <div class="second-row">
-   <button id="r2-1" >7</button>
-   <button id="r2-2" >8</button>
-   <button id="r2-3" >9</button>
+   <button id="r2-1"  class="sayi">7</button>
+   <button id="r2-2"  class="sayi">8</button>
+   <button id="r2-3"  class="sayi">9</button>
    <button id="r2-4" >X</button>
 </div>
 <div class="third-row">
-   <button id="r3-1" >4</button>
-   <button id="r3-2" >5</button>
-   <button id="r3-3" >6</button>
+   <button id="r3-1"  class="sayi">4</button>
+   <button id="r3-2"  class="sayi">5</button>
+   <button id="r3-3"  class="sayi">6</button>
    <button id="r3-4" >-</button>
 </div>
 <div class="fourth-row">
-   <button id="r4-1"  >1</button>
-   <button id="r4-2"  >2</button>
-   <button id="r4-3"  >3</button>
+   <button id="r4-1"  class="sayi">1</button>
+   <button id="r4-2"  class="sayi">2</button>
+   <button id="r4-3"  class="sayi" >3</button>
    <button id="r4-4"  >+</button>
 </div>
 <div class="fifth-row">
-  <button id="r5-1" >0</button>
+  <button id="r5-1" class="sayi">0</button>
   <button id="r5-2" >.</button>
   <button id="r5-3" >=</button>
+</div>
+
+
+
 </div>
             </div>
             <div class="col-2"></div>
@@ -244,8 +269,55 @@
     </div>
     
 </body>
+
 <script
-  src="https://code.jquery.com/jquery-3.6.0.slim.js"
-  integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+<script>
+ 
+  $(document).ready(function(){
+    var veri_1 = 0 ;
+    $( "button" ).click(function() {
+      var button_val = $( this ).text();
+      if( button_val == '+')
+      {
+        //alert("şuan toplama işlmenice geçildi")
+        console.log(" = "+$( "#output" ).text());
+        veri_1 = parseInt( $( "#output" ).text());
+        $( "#output" ).text("+");
+        //console.log("hafıza da " + veri_1);
+      }
+      else if( button_val == '=')
+      {
+          
+        var sonuc = veri_1 + parseInt( $( "#output" ).text());
+        $( "#output" ).text("= " + sonuc );
+        //alert("Hesap makinesinde Sıfırlama yapınız");
+
+      }
+      else if( button_val == 'C')
+      {
+        veri_1 = 0 ;
+        $( "#output" ).text(0);
+      }
+      else
+      { 
+        if($( "#output" ).text() == '+')
+        $( "#output" ).text(0);
+
+        $( "#output" ).append(button_val);
+
+      }
+
+     
+    });
+
+  
+
+  });
+
+</script>
+
+
 </html>
