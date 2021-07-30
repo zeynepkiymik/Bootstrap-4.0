@@ -12,184 +12,31 @@
 
 #output
 {
-    width: 330px;
+    width: 430px;
     height: 100px;
     background:#bfd7d938;
     font-size: 58px;
     margin: 12px;
-    border: 4px solid;   
+    border: 4px solid; 
+    text-align: right;
+  
 }
-#r1-1
+button
     {
     width: 100px;
     height: 100px;
     background: #007bff;
     font-size: 58px;
-    margin: 12px;
+    margin: 4px;
     border: 4px solid;
+    transition: all 1s;
     }
     
-    #r1-3
-    {
-    width: 100px;
-    height: 100px;
-    background: #007bff;
-    font-size: 58px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r1-4
-    {
-    width: 100px;
-    height: 100px;
-    background: #007bff;
-    font-size: 58px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r2-1
-    {
-        width: 75px;
-    height: 75px;
-    background: #007bff;
-    font-size: 28px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r2-2
-    {
-        width: 75px;
-    height: 75px;
-    background: #007bff;
-    font-size: 28px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r2-3
-    {
-        width: 75px;
-    height: 75px;
-    background: #007bff;
-    font-size: 28px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r2-4
-    {
-        width: 75px;
-    height: 75px;
-    background: #007bff;
-    font-size: 28px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r3-1
-    {
-    width: 75px;
-    height: 75px;
-    background: #007bff;
-    font-size: 28px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r3-2
-    {
-    width: 75px;
-    height: 75px;
-    background: #007bff;
-    font-size: 28px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r3-3
-    {
-    width: 75px;
-    height: 75px;
-    background: #007bff;
-    font-size: 28px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r3-4
-    {
-    width: 75px;
-    height: 75px;
-    background: #007bff;
-    font-size: 28px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r4-1
-    {
-    width: 75px;
-    height: 75px;
-    background: #007bff;
-    font-size: 28px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r4-2
-    {
-    width: 75px;
-    height: 75px;
-    background: #007bff;
-    font-size: 28px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r4-3
-    {
-    width: 75px;
-    height: 75px;
-    background: #007bff;
-    font-size: 28px;
-    margin: 4px;
-    border: 4px solid;
-    }
-    #r4-4
-    {
-    width: 75px;
-    height: 75px;
-    background: #007bff;
-    font-size: 28px;
-    margin: 4px;
-    border: 4px solid;
-    }
-
-    #r5-1
-    {
-    width: 100px;
-    height: 100px;
-    background: #007bff;
-    font-size: 58px;
-    margin: 12px;
-    border: 4px solid;
-    transition: all 4s;
-    }
-    #r5-2
-    {
-    width: 100px;
-    height: 100px;
-    background: #007bff;
-    font-size: 58px;
-    margin: 4px;
-    border: 4px solid;
-    transition: all 4s;
-    }
-    #r5-3
-    {
-    width: 100px;
-    height: 100px;
-    background: #007bff;
-    font-size: 58px;
-    margin: 4px;
-    border: 4px solid;
-    transition: all 4s;
-    }
+     
     button:hover {
  cursor: pointer;
  background-color: #ff0000 !important;
- zoom: 1.1;
+  
 }
 
 button:focus {
@@ -199,8 +46,6 @@ button:active {
  background-color: #98a6b3;
 }
 </style>
-
-
 
 </head>
 <body> 
@@ -231,31 +76,34 @@ button:active {
                 <p id="output">0</p>
 <div class="first-row">
    <button id="r1-1" onclick="ekraniTemizle()">C</button>
+   <button id="r1-2">-/+</button>
    <button id="r1-3">%</button>
    <button id="r1-4">/</button>
 </div>
 <div class="second-row">
-   <button id="r2-1"  class="sayi">7</button>
-   <button id="r2-2"  class="sayi">8</button>
-   <button id="r2-3"  class="sayi">9</button>
+   <button id="r2-1">7</button>
+   <button id="r2-2">8</button>
+   <button id="r2-3">9</button>
    <button id="r2-4" >X</button>
 </div>
 <div class="third-row">
-   <button id="r3-1"  class="sayi">4</button>
-   <button id="r3-2"  class="sayi">5</button>
-   <button id="r3-3"  class="sayi">6</button>
+   <button id="r3-1" >4</button>
+   <button id="r3-2"  >5</button>
+   <button id="r3-3"  >6</button>
    <button id="r3-4" >-</button>
 </div>
 <div class="fourth-row">
-   <button id="r4-1"  class="sayi">1</button>
-   <button id="r4-2"  class="sayi">2</button>
-   <button id="r4-3"  class="sayi" >3</button>
+   <button id="r4-1"  >1</button>
+   <button id="r4-2"  >2</button>
+   <button id="r4-3"  >3</button>
    <button id="r4-4"  >+</button>
 </div>
 <div class="fifth-row">
   <button id="r5-1" class="sayi">0</button>
   <button id="r5-2" >.</button>
-  <button id="r5-3" >=</button>
+  <button id="r5-3" >^</button>
+  <button id="r5-4" >=</button>
+
 </div>
 
 
