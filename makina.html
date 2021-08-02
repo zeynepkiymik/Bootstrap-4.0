@@ -84,7 +84,7 @@ button:active {
    <button id="r2-1">7</button>
    <button id="r2-2">8</button>
    <button id="r2-3">9</button>
-   <button id="r2-4" >X</button>
+   <button id="r2-4" >*</button>
 </div>
 <div class="third-row">
    <button id="r3-1">4</button>
@@ -122,50 +122,8 @@ button:active {
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
-<script>
- 
-  $(document).ready(function(){
-    var veri_1 = 0 ;
-    $( "button" ).click(function() {
-      var button_val = $( this ).text();
-      if( button_val == '+')
-      {
-        //alert("şuan toplama işlmenice geçildi")
-        console.log(" = "+$( "#output" ).text());
-        veri_1 = parseInt( $( "#output" ).text());
-        $( "#output" ).text("+");
-        //console.log("hafıza da " + veri_1);
-      }
-      else if( button_val == '=')
-      {
-          
-        var sonuc = veri_1 + parseInt( $( "#output" ).text());
-        $( "#output" ).text("= " + sonuc );
-        //alert("Hesap makinesinde Sıfırlama yapınız");
 
-      }
-      else if( button_val == 'C')
-      {
-        veri_1 = 0 ;
-        $( "#output" ).text(0);
-      }
-      else
-      { 
-        if($( "#output" ).text() == '+')
-        $( "#output" ).text(0);
-
-        $( "#output" ).append(button_val);
-
-      }
-
-     
-    });
-
-  
-
-  });
-
-</script>
+<script src="hesapmakinesi.js"></script>
 
 
 </html>
